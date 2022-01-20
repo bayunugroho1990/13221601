@@ -5,7 +5,7 @@ using namespace std;
 
 int emberA = 0;
 int emberB = 0;
-int instruksi;
+string instruksi;
 
 //-----------------------------------------------------
 void tuangAkeB()
@@ -84,64 +84,50 @@ int main()
 {
     do
     {
-    cout<<"--------------------------------------------------------\n";
-    cout<< "\n";
+    cout<<"--------------------------------------------------------\n\n";
     cout<<"Selamat datang di GAME EMBER\n";
-    cout<<"Game akan berakhir ketika Ember B berisi 4 Liter\n";
-    cout<<"\n";
-    cout<< "\tEmber A (maks 3L) = "; cout<< emberA; cout<< " Liter";
-    cout<< "\n";
-    cout<< "\tEmber B (maks 5L) = "; cout<< emberB; cout<< " Liter";
-    cout<< "\n";
-    cout<< "\n";
-    cout<< "Pilih intruksi di bawah ini:\n";
-    cout<< "\n";
+    cout<<"Game akan berakhir ketika Ember B berisi 4 Liter\n\n";
+    cout<< "\tEmber A (maks 3L) = "; cout<< emberA; cout<< " Liter\n";
+    cout<< "\tEmber B (maks 5L) = "; cout<< emberB; cout<< " Liter\n\n";
+    cout<< "Pilih intruksi di bawah ini:\n\n";
     cout<< "\t1. Isi ember A 3L\n";
     cout<< "\t2. Isi ember B 5L\n";
     cout<< "\t3. Tuang ember A ke ember B\n";
     cout<< "\t4. Tuang ember B ke ember A\n";
     cout<< "\t5. Kosongkan ember A\n";
-    cout<< "\t6. Kosongkan ember B\n";
-    cout<< "\n";
+    cout<< "\t6. Kosongkan ember B\n\n";
     cout<< "Instruksi yang dipilih:"; cin>> instruksi;
     cout<< "\n";
-        if (instruksi>6)
-        {
-            cout<< "instruksi salah";
-        }
-        else
-        {
-            if (instruksi==1)
+
+            if (instruksi=="1")
             {
                 emberA = 3;
             }
-            else if (instruksi==2)
+            else if (instruksi=="2")
             {
                 emberB = 5;
             }
-            else if (instruksi==3)
+            else if (instruksi=="3")
             {
                 tuangAkeB();
             }
-            else if (instruksi==4)
+            else if (instruksi=="4")
             {
                 tuangBkeA();
             }
-            else if (instruksi==5)
+            else if (instruksi=="5")
             {
                 emberA = 0;
             }
-            else if (instruksi==6)
+            else if (instruksi=="6")
             {
             emberB = 0;
             }
-        }
+
     }
     while (emberB!=4);
-    cout<< "Ember B = "; cout<< emberB; cout<< " Liter";
-    cout<< "\n";
-    cout<< "\n";
-    cout<< "-----SELAMAT ANDA BERHASIL-----";
-    cout<< "\n";
+    cout<< "-----SELAMAT ANDA BERHASIL-----\n";
+    cout<< "Ember A = "; cout<< emberA; cout<< " Liter\n";
+    cout<< "Ember B = "; cout<< emberB; cout<< " Liter\n\n";
     getch();
 }
